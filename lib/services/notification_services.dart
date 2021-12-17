@@ -158,7 +158,7 @@ class NotifyHelper {
   void _configureSelectNotificationSubject() {
     selectNotificationSubject.stream.listen((String payload) async {
       debugPrint('My payload is ' + payload);
-      await Get.to(() => const NotificationScreen(payload:''));
+      await Get.to(() =>  NotificationScreen(payload:payload));
     });
   }
 }

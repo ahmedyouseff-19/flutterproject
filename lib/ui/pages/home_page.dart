@@ -23,6 +23,7 @@ import 'notification_screen.dart';
 
 
 
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -157,7 +158,7 @@ class _HomePageState extends State<HomePage> {
             :Axis.vertical,
         itemBuilder:( BuildContext contex, int index)
       {
-       var task = _taskController.tsaklist[index];
+       var task = _taskController.tsakList[index];
 
 
 
@@ -178,7 +179,7 @@ class _HomePageState extends State<HomePage> {
             ),
         );
         },
-        itemCount: _taskController.tsaklist.length,
+        itemCount: _taskController.tsakList.length,
       ),
     );
 
@@ -315,13 +316,13 @@ showBottomSheet(BuildContext context , Task task){
                   _buildBottomSheet(
                     label: 'Task Completed',
                     onTap: (){
-                      Get.back();
+              Get.back();
+
 
                     },
                     clr: primaryClr,
 
                   ),
-
 
                   _buildBottomSheet(
                     label: 'Delete Task',
